@@ -1,4 +1,4 @@
-/************ INJECT ANIMATION + LABEL CSS ************/
+
 const style = document.createElement("style");
 style.innerHTML = `
   .db-remove {
@@ -29,14 +29,14 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
-/************ ANIMATED REMOVE ************/
+
 function animateRemove(el) {
   if (!el) return;
   el.classList.add("db-remove");
   setTimeout(() => el.remove(), 300);
 }
 
-/************ AUTO REMOVE SAVED ELEMENTS ************/
+
 chrome.storage.local.get(["blocked"], (res) => {
   const blocked = res.blocked || [];
   blocked.forEach((selector) => {
@@ -45,7 +45,7 @@ chrome.storage.local.get(["blocked"], (res) => {
   });
 });
 
-/************ BASIC REMOVALS ************/
+
 function removeSidebar() {
   animateRemove(document.querySelector("#guide"));
 }
@@ -58,7 +58,6 @@ function removeSearch() {
   animateRemove(document.querySelector("ytd-searchbox"));
 }
 
-/************ SAVE SELECTOR ************/
 function saveSelector(selector) {
   chrome.storage.local.get(["blocked"], (res) => {
     const blocked = res.blocked || [];
@@ -69,7 +68,6 @@ function saveSelector(selector) {
   });
 }
 
-/************ CSS SELECTOR GENERATOR ************/
 function getSelector(el) {
   if (el.id) return `#${el.id}`;
   if (el.className)
@@ -81,7 +79,6 @@ function getSelector(el) {
   return el.tagName.toLowerCase();
 }
 
-/************ ELEMENT PICKER ************/
 let pickerEnabled = false;
 let lastEl = null;
 let labelEl = null;
@@ -133,7 +130,6 @@ document.addEventListener(
   true
 );
 
-/************ MESSAGE LISTENER ************/
 chrome.runtime.onMessage.addListener((msg) => {
   if (msg.action === "REMOVE_SIDEBAR") removeSidebar();
   if (msg.action === "REMOVE_COMMENTS") removeComments();
