@@ -1,3 +1,6 @@
+You cann use it from here official microsoft store -> https://microsoftedge.microsoft.com/addons/detail/dom-remover/kefnfgigojifnlemcanjcgcclhedpffl
+
+
 Dom Remover is a lightweight productivity browser extension developed by Anujraj that lets you remove distracting elements from any website with ease.
 
 With Dom Remover, you can visually select and remove unwanted parts of a webpage such as sidebars, comments, recommendations, or any other distracting content. The extension is designed to help you stay focused and create a cleaner browsing experience.
