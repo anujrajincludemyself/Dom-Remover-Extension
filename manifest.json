@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "DOM Remover",
+  "version": "1.0",
+  "description": "Remove any DOM element from websites",
+  "permissions": ["storage", "activeTab", "scripting"],
+
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
