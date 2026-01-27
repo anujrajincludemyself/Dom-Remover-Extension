@@ -1,3 +1,5 @@
+we are not capturing any of your information
+
 You cann use it from here official microsoft store -> https://microsoftedge.microsoft.com/addons/detail/dom-remover/kefnfgigojifnlemcanjcgcclhedpffl
 
 
