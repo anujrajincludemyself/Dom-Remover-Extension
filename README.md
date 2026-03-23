@@ -40,7 +40,7 @@ Select the project folder containing manifest.json.
 
 Pin Dom Remover from the extensions toolbar.
 
-🚀 How to Use
+ How to Use
 
 Open any website (for example: YouTube).
 
